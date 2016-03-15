@@ -67,7 +67,10 @@ LightingScene.prototype.initLights = function() {
 	this.lights[1].setPosition(10.5, 6.0, 1.0, 1.0);
 	this.lights[1].setVisible(true); // show marker on light position (different from enabled)
 
-	//this.lights[2].setPosition(10.5, 6.0, 5.0, 1.0);
+	//
+
+	this.lights[2].setPosition(10.5, 6.0, 5.0, 1.0);
+	this.lights[2].setVisible(true); // show marker on light position
 	//this.lights[1].setVisible(true); // show marker on light position (different from enabled)
 	//this.lights[3].setPosition(4, 6.0, 5.0, 1.0);
 	//this.lights[1].setVisible(true); // show marker on light position (different from enabled)
@@ -80,6 +83,12 @@ LightingScene.prototype.initLights = function() {
 	this.lights[1].setAmbient(0, 0, 0, 1);
 	this.lights[1].setDiffuse(1.0, 1.0, 1.0, 1.0);
 	this.lights[1].enable();
+
+	this.lights[2].setAmbient(0,0,0,1);
+	this.lights[2].setDiffuse(0, 1, 0, 1.0);
+	this.lights[2].setSpecular(1,1, 1 ,1);
+	this.lights[2].enable();
+
 };
 
 LightingScene.prototype.updateLights = function() {
